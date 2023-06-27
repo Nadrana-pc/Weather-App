@@ -25,192 +25,269 @@ class _Ui2State extends State<Ui2> {
     } else {
       return Scaffold(
           body: Container(
-        color: Colors.black,
+        color: const Color.fromARGB(255, 241, 188, 28),
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  const Text(
-                    'Country ',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        const Text(
+                          'Country ',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                        const Text(
+                          ':',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                        Text(
+                          weather.location.country.toString(),
+                          style: const TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        )
+                      ],
+                    ),
                   ),
-                  const Text(
-                    ':',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                  ),
-                  Text(
-                    weather.location.country.toString(),
-                    style: const TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                  )
-                ],
+                ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  const Text(
-                    'Region ',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        const Text(
+                          'Region ',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                        const Text(
+                          ':',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                        Text(
+                          weather.location.region.toString(),
+                          style: const TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        )
+                      ],
+                    ),
                   ),
-                  const Text(
-                    ':',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                  ),
-                  Text(
-                    weather.location.region.toString(),
-                    style: const TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                  )
-                ],
+                ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  const Text(
-                    'Feels like ',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        const Text(
+                          'Feels like ',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                        const Text(
+                          ':',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                        Text(
+                          weather.current.feelslikeC.toString(),
+                          style: const TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        )
+                      ],
+                    ),
                   ),
-                  const Text(
-                    ':',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                  ),
-                  Text(
-                    weather.current.feelslikeC.toString(),
-                    style: const TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                  )
-                ],
+                ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  const Text(
-                    'Wind direction',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        const Text(
+                          'Wind direction',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                        const Text(
+                          ':',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                        Text(
+                          weather.current.windDegree.toString(),
+                          style: const TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        )
+                      ],
+                    ),
                   ),
-                  const Text(
-                    ':',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                  ),
-                  Text(
-                    weather.current.windDegree.toString(),
-                    style: const TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                  )
-                ],
+                ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  const Text(
-                    'Cloud ',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        const Text(
+                          'Cloud ',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                        const Text(
+                          ':',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                        Text(
+                          weather.current.cloud.toString(),
+                          style: const TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        )
+                      ],
+                    ),
                   ),
-                  const Text(
-                    ':',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                  ),
-                  Text(
-                    weather.current.cloud.toString(),
-                    style: const TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                  )
-                ],
+                ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  const Text(
-                    'Gust',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        const Text(
+                          'Gust',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                        const Text(
+                          ':',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                        Text(
+                          weather.current.gustKph.toString(),
+                          style: const TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        )
+                      ],
+                    ),
                   ),
-                  const Text(
-                    ':',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                  ),
-                  Text(
-                    weather.current.gustKph.toString(),
-                    style: const TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                  )
-                ],
+                ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  const Text(
-                    'Pressure',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        const Text(
+                          'Pressure',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                        const Text(
+                          ':',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                        Text(
+                          weather.current.pressureIn.toString(),
+                          style: const TextStyle(
+                              color: Color.fromARGB(255, 241, 188, 28),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        )
+                      ],
+                    ),
                   ),
-                  const Text(
-                    ':',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                  ),
-                  Text(
-                    weather.current.pressureIn.toString(),
-                    style: const TextStyle(
-                        color: Color.fromARGB(255, 241, 188, 28),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                  )
-                ],
+                ),
               )
             ],
           ),
