@@ -7,4 +7,10 @@ Welcome to the Flutter Weather App project! This is a beautiful and user-friendl
 - **Location-based Weather**: The app uses the device's location to display weather information for the user's current location by default. Users can also search for weather in other locations.
 - **Detailed Weather Information**: Get detailed weather data including temperature, humidity, wind speed, and more.
 
+## Screenshots
+
+<div>
+  <img src="screenshots/ss1.jpg" alt="Screenshot of main screen" width="190"> &nbsp;
+  <img src="screenshots/ss2.jpg" alt="Screenshot of main screen" width="190">
+</div>
 
