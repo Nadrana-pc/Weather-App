@@ -1,5 +1,7 @@
 # Weather App
 
+![my badge](https://img.shields.io/badge/Made%20with-Flutter-blue?style=for-the-badge&logo=flutter) 
+
 Welcome to the Flutter Weather App project! This is a beautiful and user-friendly weather application built using the Flutter framework, providing real-time weather data sourced from a REST API. 
 
 - **Beautiful UI**: The app boasts an attractive and user-friendly user interface to provide an exceptional user experience.
