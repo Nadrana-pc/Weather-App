@@ -1,3 +1,4 @@
+
 class WeatherDataModel {
   final Location location;
   final Current current;

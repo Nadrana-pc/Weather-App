@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:my_weather/controller/locationController.dart';
 import 'package:my_weather/dataModel.dart';
+import 'package:my_weather/dateFunction.dart';
 import 'package:my_weather/textEcontoller.dart';
-import 'textEcontoller.dart';
 
 class ApiClass with ChangeNotifier {
   WeatherDataModel? _weatherDataModel;
@@ -24,14 +24,14 @@ class ApiClass with ChangeNotifier {
     }
     print(geoData);
     var url = Uri.parse(
-        'http://api.weatherapi.com/v1/current.json?q=$geoData&key=4c587979de58442798e45943231906');
-    print(locationProvider.latitude);
-    print(locationProvider.longitute);
+        'http://api.weatherapi.com/v1/current.json?q=$geoData&key=82049e30049d4fb091f93603231509');
+   
     var responce = await http.get(url);
     if (responce.statusCode == 200) {
       final jsondata = jsonDecode(responce.body);
-      print(jsondata);
+    
       _weatherDataModel = WeatherDataModel.fromJson(jsondata);
+      timeformat(_weatherDataModel);
       isLoading = false;
       notifyListeners();
     } else {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:my_weather/UI/ui2.dart';
 import 'package:my_weather/apiFunction.dart';
+import 'package:my_weather/dateFunction.dart';
 import 'package:provider/provider.dart';
 import 'package:my_weather/textEcontoller.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
@@ -52,9 +52,10 @@ class _Ui1State extends State<Ui1> {
             color: Color.fromARGB(255, 241, 188, 28),
           ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 25),
+                padding: const EdgeInsets.only(left: 10, right: 10, top: 25),
                 child: Row(
                   children: [
                     Expanded(
@@ -109,7 +110,7 @@ class _Ui1State extends State<Ui1> {
                                 ),
                               )),
                         Padding(
-                          padding: const EdgeInsets.only(top: 20, bottom: 20),
+                          padding: const EdgeInsets.only(top: 13, bottom: 13),
                           child: Container(
                             decoration: BoxDecoration(
                                 color: Colors.black,
@@ -118,7 +119,7 @@ class _Ui1State extends State<Ui1> {
                               padding: const EdgeInsets.only(
                                   left: 9, right: 9, top: 4, bottom: 4),
                               child: Text(
-                                weather.location.localtime.toString(),
+                                date!,
                                 style: const TextStyle(
                                     color: Color.fromARGB(255, 241, 188, 28)),
                               ),
@@ -131,11 +132,11 @@ class _Ui1State extends State<Ui1> {
                               fontSize: 20, fontWeight: FontWeight.bold),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 10, bottom: 20),
+                          padding: const EdgeInsets.only(top: 5, bottom: 5),
                           child: Text(
                             ' ${weather.current.tempC.toString()}°C',
                             style: const TextStyle(
-                                fontSize: 70, fontWeight: FontWeight.bold),
+                                fontSize: 60, fontWeight: FontWeight.bold),
                           ),
                         ),
                         Padding(
@@ -259,7 +260,7 @@ class _Ui1State extends State<Ui1> {
                     ),
               Padding(
                 padding: const EdgeInsets.only(
-                  top: 30,
+                  top: 20,
                 ),
                 child: ElevatedButton(
                     onPressed: () {
@@ -273,8 +274,8 @@ class _Ui1State extends State<Ui1> {
                             MaterialStateProperty.all(Colors.black),
                         foregroundColor: MaterialStateProperty.all(
                             const Color.fromARGB(255, 241, 188, 28))),
-                    child: const Text('view more')),
-              )
+                    child: const Text('view more...')),
+              ),
             ],
           ),
         ),
